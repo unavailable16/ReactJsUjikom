@@ -24,8 +24,9 @@ const Nav = () => {
           to="/"
           className={`button rounded ${isActive("/")}`}
           onClick={() => window.history.back()}
-        >
+        >  
           <HiReply />
+          <span> </span>
           Back
         </NavLink>
         )}

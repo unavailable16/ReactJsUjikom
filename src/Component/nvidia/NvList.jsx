@@ -18,7 +18,7 @@ const NvList = ({ Gpunvidia, onSave, onDelete }) => {
   };
 
   return (
-    <div className="row">
+    <div className="row" id="row">
       {Gpunvidia.map((nvidia) => (
         <div key={nvidia.id} className="col-row">
           {nvidia === projectBeingEdited ? (

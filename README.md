@@ -1,10 +1,10 @@
 # Praktek + Ujikom React JS Ahdhan Setya Ananta XII RPL
 
-### Notes
+## Notes
 
 Make sure you have Node.js and npm installed on your device.
 
-### Installation
+## Installation
 
 1. Clone the repository:
 
@@ -24,7 +24,7 @@ cd ReactJsUjikom
 npm install
 ```
 
-### Used Library
+## Used Library
 
 - JSON Server
 ```bash
@@ -47,7 +47,7 @@ npm install react-router-dom
 npm install aos --save
 ```
 
-### Deployment
+## Deployment
 
 To run the database / api server:
 
@@ -67,7 +67,33 @@ npm start
 
 - React
 - Mini CSS
+- AOS (Animate On Scroll)
+- React Icons
 
 ## Preview
 ### HomePage
-![alt img1](https://github.com/unavailable16/Web Screenshot/MainPage Top.png)
+![alt img1](https://github.com/unavailable16/ReactJsUjikom/blob/main/Web_Screenshot/MainPage_Top.png)
+![alt img1](https://github.com/unavailable16/ReactJsUjikom/blob/main/Web_Screenshot/Main_Page_Sub_Content.png)
+![alt img1](https://github.com/unavailable16/ReactJsUjikom/blob/main/Web_Screenshot/Footer.png)
+
+### About Page
+![alt img1](https://github.com/unavailable16/ReactJsUjikom/blob/main/Web_Screenshot/About_Page.png)
+
+### Create Page
+![alt img1](https://github.com/unavailable16/ReactJsUjikom/blob/main/Web_Screenshot/Create_Page.png)
+
+### Search Page
+![alt img1](https://github.com/unavailable16/ReactJsUjikom/blob/main/Web_Screenshot/Search_Page.png)
+![alt img1](https://github.com/unavailable16/ReactJsUjikom/blob/main/Web_Screenshot/Search_Page_&_Search_Results.png)
+
+### AMD Page
+![alt img1](https://github.com/unavailable16/ReactJsUjikom/blob/main/Web_Screenshot/Amd_Pages.png)
+![alt img1](https://github.com/unavailable16/ReactJsUjikom/blob/main/Web_Screenshot/Amd_Detail_Pages.png)
+
+### Intel Page
+![alt img1](https://github.com/unavailable16/ReactJsUjikom/blob/main/Web_Screenshot/Intel_Pages.png)
+![alt img1](https://github.com/unavailable16/ReactJsUjikom/blob/main/Web_Screenshot/Intel_Detail_Pages.png)
+
+### Nvidia Page
+![alt img1](https://github.com/unavailable16/ReactJsUjikom/blob/main/Web_Screenshot/Nvidia_Pages.png)
+![alt img1](https://github.com/unavailable16/ReactJsUjikom/blob/main/Web_Screenshot/Nvidia_Detail_Pages.png)

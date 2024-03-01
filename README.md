@@ -1,4 +1,4 @@
-## Getting Started
+# Praktek + Ujikom React JS Ahdhan Setya Ananta XII RPL
 
 ### Notes
 
@@ -67,3 +67,7 @@ npm start
 
 - React
 - Mini CSS
+
+## Preview
+### HomePage
+![alt img1](https://github.com/unavailable16/Web Screenshot/MainPage Top.png)

@@ -17,7 +17,7 @@ const IntelList = ({ Gpuintel, onSave, onDelete }) => {
   };
 
   return (
-    <div className="row">
+    <div className="row" id="row">
       {Gpuintel.map((intel) => (
         <div key={intel.id} className="col-row">
           {intel === projectBeingEdited ? (

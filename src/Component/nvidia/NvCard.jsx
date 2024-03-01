@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { GoTrash } from "react-icons/go";
 import "../List.css";
 
 const NvCard = (props) => {
@@ -39,7 +40,7 @@ const NvCard = (props) => {
             className="bordered secondary"
             onClick={() => handleDeleteClick(nvidia)}
           >
-            <span className="icon-alert inverse"></span>
+            <GoTrash />
             Delete
           </button>
         </div>

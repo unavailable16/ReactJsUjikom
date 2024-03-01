@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { GoTrash } from "react-icons/go";
 import "../List.css";
 
 const IntelCard = (props) => {
@@ -39,7 +40,7 @@ const IntelCard = (props) => {
             className="bordered secondary"
             onClick={() => handleDeleteClick(intel)}
           >
-            <span className="icon-alert inverse"></span>
+            <GoTrash />
             Delete
           </button>
         </div>

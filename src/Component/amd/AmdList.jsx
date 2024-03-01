@@ -18,7 +18,7 @@ const NvList = ({ Gpuamd, onSave, onDelete }) => {
   };
 
   return (
-    <div className="row">
+    <div className="row" id="row">
       {Gpuamd.map((amd) => (
         <div key={amd.id} className="col-row">
           {" "}

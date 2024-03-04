@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState} from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Nav from "./Component/Main_Page/Navbar";
 import Main from "./Component/Main_Page/Main";
@@ -16,6 +16,8 @@ import "aos/dist/aos.css";
 import "./App.css"
 
 function App() {
+  const [showScrollButton, setShowScrollButton] = useState(false);
+
   useEffect(() => {
     AOS.init();
   }, []);
@@ -24,10 +26,38 @@ function App() {
     window.scrollTo(0, 0);
   }, []);
 
+    const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
+useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setShowScrollButton(true);
+      } else {
+        setShowScrollButton(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="App">
       <Router>
         <Nav className="awok"/>
+        {showScrollButton && (
+        <button className="scroll-to-top" onClick={scrollToTop}>
+          Scroll to Top
+        </button>
+      )}
         <Routes>
           <Route index element={<Main />}/>
           <Route path="about" element={<About />} />

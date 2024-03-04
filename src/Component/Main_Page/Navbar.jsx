@@ -1,38 +1,38 @@
 import React, { useState } from "react";
-import { NavLink, Navigate, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useHistory } from "react-router-dom";
 import { HiReply } from "react-icons/hi";
 import { GoSignIn } from "react-icons/go";
 import { useAuth } from "../AuthContext";
-
 import "./Navbar.css";
 
-const Nav = () => {
+const Navbar = () => {
   const [activeButton, setActiveButton] = useState(null);
   const location = useLocation();
+  const history = useHistory();
   const { isLoggedIn, username, logout } = useAuth();
+
   const handleButtonClick = (buttonName) => {
     setActiveButton(buttonName);
   };
 
-  // Function to determine if a NavLink should be active
   const isActive = (path) => {
     return location.pathname === path ? "active" : "";
   };
 
   const handleLogout = () => {
-    
-    logout();
-  }
+    logout(); // Panggil fungsi logout dari AuthContext
+    history.push("/login"); // Arahkan pengguna ke halaman login setelah logout
+  };
+
   return (
     <>
       {location.pathname !== "/" && location.pathname !== "/sign" && (
         <header data-aos="fade-down" data-aos-duration="300" className="sticky">
-
           {isLoggedIn && (
             <span className="username">Welcome, {username}</span>
           )}
 
-          {location.pathname !== "/home" && ( // Conditionally render back button if not on home page
+          {location.pathname !== "/home" && (
             <NavLink
               to="/"
               className={`button rounded ${isActive("/")}`}
@@ -43,7 +43,6 @@ const Nav = () => {
               Back
             </NavLink>
           )}
-
 
           <NavLink
             data-aos="fade-down"
@@ -89,6 +88,7 @@ const Nav = () => {
               Create
             </span>
           </NavLink>
+          
           <NavLink
             data-aos="fade-down"
             data-aos-duration="700"
@@ -104,7 +104,7 @@ const Nav = () => {
             </span>
           </NavLink>
 
-          {isLoggedIn &&
+          {isLoggedIn && (
             <button
               data-aos="fade-down"
               data-aos-duration="700"
@@ -117,12 +117,11 @@ const Nav = () => {
                 Log Out
               </span>
             </button>
-          }
-
+          )}
         </header>
       )}
     </>
   );
 };
 
-export default Nav;
+export default Navbar;
